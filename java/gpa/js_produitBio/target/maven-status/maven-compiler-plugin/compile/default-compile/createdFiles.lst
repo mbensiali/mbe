@@ -1,0 +1,6 @@
+com\mbe\js_produitBio\repositories\CategorieRepository.class
+com\mbe\js_produitBio\repositories\ProduitRepository.class
+com\mbe\js_produitBio\actions\ProduitAction.class
+com\mbe\js_produitBio\actions\CategorieAction.class
+com\mbe\js_produitBio\metier\Categorie.class
+com\mbe\js_produitBio\metier\Produit.class

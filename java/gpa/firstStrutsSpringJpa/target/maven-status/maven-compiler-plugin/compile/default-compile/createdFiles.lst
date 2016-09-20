@@ -1,0 +1,5 @@
+com\mbe\firstStrutsSpringJpa\metier\Message.class
+com\mbe\firstStrutsSpringJpa\metier\Etiquette.class
+com\mbe\firstStrutsSpringJpa\repository\MessageDAO.class
+com\mbe\firstStrutsSpringJpa\actions\IndexAction.class
+com\mbe\firstStrutsSpringJpa\repository\IMessageDAO.class

@@ -1,0 +1,26 @@
+    <div class="row" ng-controller="photoCtrl" ng-cloak>
+            <div class="col-md-12"
+                 id="listePhoto"
+                 ng-hide="data.error">
+                <table class="table table-stripped">
+                    <thead>
+                        <tr>
+                            <th ng-repeat="col in data.columns" >
+                                <a ng-click="selectOrderColumn(col)"
+                                  class="btn btn-block btn-default btn-md"
+                                  ng-class="getOrderColumnClass(col)">{{col}}</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="photo in data.photos | orderBy: data.filterColumn">
+                            <!-- <td>{{produit.nom}}</td>
+                            <td>{{produit.poids}}</td>
+                            <td>{{produit.prix | currency}}</td>
+                            <td>{{produit.stock}}</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

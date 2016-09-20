@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="description">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>le champs nom doit etre rempli</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">2</param>
+			<param name="maxLength">100</param>
+			<param name="trim">true</param>
+			<message>le nom doit faire entre ${minLength} et ${maxLength} caracteres</message>
+		</field-validator>
+	</field>
+	<field name="prixDepart">
+		<field-validator type="required">
+			<message>un prix de depart requis</message>
+		</field-validator>
+		<field-validator type="double">
+			<param name="min">0</param>
+			<message>le prix de départ doit être positif</message>
+		</field-validator>
+	</field>
+	<field name="enchereMin">
+		<field-validator type="double">
+			<param name="min">0</param>
+			<message>l'enchere doit être positif</message>
+		</field-validator>
+	</field>
+	<field name="prenom">
+		<field-validator type="regex">
+			<param name="regex"><![CDATA[[-a-zA-Z. ']+]]></param>
+			<message>un prenom ne doit contenir que des caracteres autorise</message>
+		</field-validator>
+	</field>
+</validators>

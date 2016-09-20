@@ -1,0 +1,13 @@
+com\mbe\spring_produit\repository\ProduitDAO.class
+com\mbe\spring_produit\metier\Illustration.class
+com\mbe\spring_produit\actions\IndexAction.class
+com\mbe\spring_produit\actions\CategorieAction.class
+com\mbe\spring_produit\repository\IProduitDAO.class
+com\mbe\spring_produit\repository\CategorieDAO.class
+com\mbe\spring_produit\metier\Produit.class
+com\mbe\spring_produit\repository\ICategorieDAO.class
+com\mbe\spring_produit\utils\FileStorageManager.class
+com\mbe\spring_produit\repository\IIllustrationDAO.class
+com\mbe\spring_produit\actions\IllustrationAction.class
+com\mbe\spring_produit\metier\Categorie.class
+com\mbe\spring_produit\repository\IllustrationDAO.class

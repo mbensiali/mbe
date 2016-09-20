@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+	<constant name="struts.action.extension" value=","/>
+    <constant name="struts.enable.SlashesInActionNames" value="true" />
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index"/>
+
+        <action name="index" class="com.mbe.livreStruts2.actions.IndexAction" method="index" >
+            <result name="success">/index.jsp</result>
+        </action>
+        
+        <action name="livre" class="com.mbe.livreStruts2.actions.LivreAction" method="index" >
+            <result name="success">/livre.jsp</result>
+        </action>
+        
+        <action name="saveBook" class="com.mbe.livreStruts2.actions.LivreAction" method="save" >
+            <result name="success">/welcome.jsp</result>
+            <result name="input">/livre.jsp</result>
+        </action>
+        
+        
+
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>

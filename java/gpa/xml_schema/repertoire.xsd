@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://courtalon.com/repertoire"
+		xmlns:tns="http://courtalon.com/repertoire" elementFormDefault="qualified">
+
+	<element name="repertoire">
+		<complexType>
+			<sequence>
+				<element name="entree" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="nom" type="string" />
+							<element name="prenom" type="string" />
+							<element name="adresse" maxOccurs="unbounded">
+								<complexType>
+									<sequence>
+										<element name="no" type="string" />
+										<element name="rue" type="string" />
+										<element name="codepostal" type="string" />
+										<element name="ville" type="string" />
+										<element name="pays" type="string" />
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="no" type="integer" use="required" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

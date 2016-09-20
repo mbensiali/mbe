@@ -1,0 +1,4 @@
+com\mbe\enchereStruts2\util\BDDListner.class
+com\mbe\enchereStruts2\util\EnchereDAO.class
+com\mbe\enchereStruts2\actions\EnchereAction.class
+com\mbe\enchereStruts2\metier\Enchere.class

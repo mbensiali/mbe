@@ -1,0 +1,4 @@
+com\mbe\produitStruts2\utils\ProduitDAO.class
+com\mbe\produitStruts2\utils\BDDListener.class
+com\mbe\produitStruts2\actions\IndexAction.class
+com\mbe\produitStruts2\metier\Produit.class
