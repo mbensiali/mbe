@@ -31,13 +31,16 @@ public class WidgetActivity extends AppCompatActivity {
         });*/
     }
 
+    private String[] choix = null;
     @Override
     protected void onStart(){
         super.onStart();
         ListView lv = (ListView) findViewById(R.id.listView);
 
+        choix = new String[]{"lundi","mardi","mercredi","jeudi","vendredi","lundi","mardi","mercredi","jeudi","vendredi","vendredi","lundi","mardi","mercredi","jeudi","vendredi"};
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(WidgetActivity.this,
-                android.R.layout.simple_list_item_1, new String[]{"lundi","mardi","mercredi","jeudi","vendredi","lundi","mardi","mercredi","jeudi","vendredi","vendredi","lundi","mardi","mercredi","jeudi","vendredi"});
+                android.R.layout.simple_list_item_1, choix);
         lv.setAdapter(adapter);
     }
 
