@@ -13,6 +13,18 @@ import org.apache.logging.log4j.Logger;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/*
+ * dans la configuration spring, je définirais le répertoire
+ * de base pour le stockage par ex : c:\stockage....
+ * 
+ * quand un dao (ou autre) a besoin de stocker des fichiers
+ * il demande a notre classe de le faire, en le fichier et surtout son contenu
+ * il indique aussi qui a besoin de ce stockage (ex: daoAvatar)
+ * si le rep n'existe pas, le FileStorageManager creer un repertoire pour chaque
+ * utilisateur/dao du service
+ * tous les noms de fichier et de répertoire son généré avec MD5 (hashage)
+ * 
+ */
 public class FileStorageManager {
 	private static Logger log = LogManager.getLogger(FileStorageManager.class); 
 	
@@ -80,6 +92,6 @@ public class FileStorageManager {
 			return Optional.empty();
 		
 		
-	}	
-
+	}
+	
 }
