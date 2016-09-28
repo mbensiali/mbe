@@ -41,6 +41,89 @@
             </result>
         </action>
         
+        <action name="photo/liste" class="com.mbe.gigaGallerie.actions.PhotoAction" method="liste" >
+            <result name="success" type="json">
+            	<param name="root">photos</param>
+            	<param name="excludeProperties">
+            		.*galerie.*,
+            		.*tags.*
+            	</param>
+            </result>
+        </action>
+         <action name="photo/find/*" class="com.mbe.gigaGallerie.actions.PhotoAction" method="findOne" >
+         	<param name="photoID">{1}</param>
+            <result name="success" type="json">
+            	<param name="root">photo</param>
+            	<param name="excludeProperties">
+            		.*galerie.*,
+            		.*tags.*
+            	</param>
+            </result>
+        </action>
+        <action name="photo/save" class="com.mbe.gigaGallerie.actions.PhotoAction" method="save" >
+            <result name="success" type="json">
+            	<param name="root">photo</param>
+            	<param name="excludeProperties">
+            		.*galerie.*,
+            		.*tags.*
+            	</param>
+            </result>
+        </action>
+        <action name="photo/upload" class="com.mbe.gigaGallerie.actions.PhotoAction" method="saveWithUpload" >
+            <result name="success" type="json">
+            	<param name="root">photo</param>
+            	<param name="excludeProperties">
+            		.*galerie.*,
+            		.*tags.*
+            	</param>
+            </result>
+        </action>
+        
+        <action name="photo/addTag/*/*" class="com.mbe.gigaGallerie.actions.PhotoAction" method="addTag" >
+        	<param name="photoID">{1}</param>
+        	<param name="tagID">{2}</param>
+            <result name="success" type="json">
+            	<param name="root">tag</param>
+            	<param name="excludeProperties">
+            		.*photos.*,
+            	</param>
+            </result>
+        </action>
+        
+        <action name="photo/removeTag/*/*" class="com.mbe.gigaGallerie.actions.PhotoAction" method="removeTag" >
+        	<param name="photoID">{1}</param>
+        	<param name="tagID">{2}</param>
+            <result name="success" type="json">
+            	<param name="root">tag</param>
+            	<param name="excludeProperties">
+            		.*photos.*,
+            	</param>
+            </result>
+        </action>
+        
+        <action name="photo/affiche/*"
+        		class="com.mbe.gigaGallerie.actions.PhotoAction"
+        		method="affiche" >
+        	<param name="photoID">{1}</param>
+            <result name="success" type="stream">
+            	<param name="inputName">photoStream</param>
+            	<param name="contentType">${photoContentType}</param>
+            	<param name="contentDisposition">attachment;filename="${photoFileName}"</param>
+            </result>
+        </action>
+
+        <action name="photo/filter/*"
+        		class="com.mbe.gigaGallerie.actions.PhotoAction"
+        		method="findByTags" >
+        	<param name="includedtags">{1}</param>
+            <result name="success" type="json">
+            	<param name="root">photos</param>
+            	<param name="excludeProperties">
+            		.*tags.*,
+            		.*galerie.*
+            	</param>
+            </result>
+        </action>
 
     </package>
 
